@@ -23,7 +23,7 @@
  *
  *
  */
-public class A_4_MedianOfTwoSortedArrays {
+public class _4_MedianOfTwoSortedArrays {
     public static void main(String[] args) {
         int[] nums1 = {1,2};
         int[] nums2 = {1,2};

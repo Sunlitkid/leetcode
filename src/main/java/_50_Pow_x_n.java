@@ -10,7 +10,7 @@
 
 
  */
-public class A_50_Pow_x_n {
+public class _50_Pow_x_n {
 
     public static void main(String[] args) {
        // System.out.println(myPow(2,Integer.MIN_VALUE));
