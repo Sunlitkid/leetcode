@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
  Given n non-negative integers a1, a2, ..., an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0).
@@ -16,7 +13,7 @@ public class _11_ContainerWithMostWater {
         }
                 System.out.println(maxArea(arr));
     }
-    public static int maxArea(int[] height) {
+    private static int maxArea(int[] height) {
         if(height.length<2){
             return  0;
         }
@@ -37,7 +34,7 @@ public class _11_ContainerWithMostWater {
         }
         return area;
     }
-    public static int area(int ai1,int ai2 ,int i1,int i2){
+    private static int area(int ai1,int ai2 ,int i1,int i2){
         return  Math.min(ai1,ai2)*(i2-i1);
-    };
+    }
 }
