@@ -11,12 +11,12 @@
 
 
  */
-public class _26_RemoveDuplicatesFromSortedArray {
+public class _80_RemoveDuplicatesFromSortedArray2 {
     public static void main(String[] args) {
-        int[] nums = {1,1};
+        int[] nums = {1,1,1,1,1,2,2};
         //removeDuplicates1(nums);
-        //System.out.println(removeDuplicates(nums));
-        //System.out.println(removeDuplicates(nums));
+       // System.out.println(removeDuplicates(nums));
+        System.out.println(removeDuplicates1(nums));
         print(nums);
 
     }
@@ -28,15 +28,28 @@ public class _26_RemoveDuplicatesFromSortedArray {
         if(nums.length==1){
             return   1;
         }
+        if(nums.length==2){
+            return   2;
+        }
         int[] newArr = new int[nums.length];
         int num = nums[0];
         newArr[0]=nums[0];
         int index = 1 ;
-        for(int i =0 ; i<nums.length;i++){
-            if(num!=nums[i]){
+        int count = 0 ;
+        for(int i =1 ; i<nums.length;i++){
+            if(num!=nums[i]){//如果不相等  就放到新串
                 newArr[index] = nums[i];
                 num = nums[i];
                 index++;
+                count = 0 ;
+            }else{
+                if(count>0){//第2次以后的相等，跳过
+
+                }else{//第一次的相等  放到新串
+                    newArr[index] = nums[i];
+                    index++;
+                    count++;
+                }
             }
         }
         for(int i = 0 ;i<nums.length ; i++){
@@ -53,10 +66,18 @@ public class _26_RemoveDuplicatesFromSortedArray {
         }
         int length = 1 ;
         int cursor = 0 ;
+        int count = 0 ;
         for(int i = 0 ; i<nums.length-1; i++){
             if(nums[cursor]==nums[cursor+1]){
-                removeByIndex(cursor,nums);
+                if(count>0){
+                    removeByIndex(cursor,nums);
+                }else{
+                    count++;
+                    cursor++;
+                    length++;
+                }
             }else{
+                count = 0;
                 cursor++;
                 length++;
             }
