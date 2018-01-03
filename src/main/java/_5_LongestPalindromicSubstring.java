@@ -7,20 +7,22 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
 
- Example:
+         Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
 
- Input: "babad"
+         Example:
 
- Output: "bab"
+         Input: "babad"
 
- Note: "aba" is also a valid answer.
- Example:
+         Output: "bab"
 
- Input: "cbbd"
+         Note: "aba" is also a valid answer.
+         Example:
 
- Output: "bb"
+         Input: "cbbd"
+
+         Output: "bb"
+
  */
 public class _5_LongestPalindromicSubstring {
     public static void main(String[] args) {
