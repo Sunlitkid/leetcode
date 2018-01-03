@@ -2,10 +2,6 @@
  * Created by sunke on 2018/1/3.
  */
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
 /**
 
          Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
