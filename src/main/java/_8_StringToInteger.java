@@ -1,6 +1,10 @@
 /**
  * Created by sunke on 2018/1/5.
  */
+
+/**
+ * 贼多限制，题目不怎么好
+ */
 public class _8_StringToInteger {
     public static void main(String[] args) {
         System.out.println(myAtoi("-2147483649"));
